@@ -1,24 +1,67 @@
-# README
+# Task Tracker backend
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+This is the backend (API) for the task tracker app built with Ruby on Rails. To run it you need to follow next instructions
 
-Things you may want to cover:
+## Requirements
 
-* Ruby version
+You need to have Ruby and Rails installed in your machine. For Linux you can use these commands:
 
-* System dependencies
+~~~ bash
+#### Download and install dependencies:
+sudo apt update
+sudo apt install -y git curl libssl-dev libreadline-dev zlib1g-dev build-essential
 
-* Configuration
+### Install rbenv
+git clone https://github.com/rbenv/rbenv.git ~/.rbenv
+echo 'export PATH="$HOME/.rbenv/bin:$PATH"' >> ~/.bashrc
+echo 'eval "$(rbenv init - bash)"' >> ~/.bashrc
+source ~/.bashrc
 
-* Database creation
+### Install ruby-build
+git clone https://github.com/rbenv/ruby-build.git ~/.rbenv/plugins/ruby-build
 
-* Database initialization
+### Install Ruby
+rbenv install 3.2.2
+rbenv global 3.2.2
 
-* How to run the test suite
+#### Verify ruby version
+ruby -v
 
-* Services (job queues, cache servers, search engines, etc.)
+### Install Rails
+gem install rails
 
-* Deployment instructions
+### Verify rails version
+rails -v
+~~~
 
-* ...
+
+You can read more in this [documentation](https://github.com/rbenv/rbenv)
+
+If your OS is Mac, read this: [installing RoR with rbenv in macos](https://www.digitalocean.com/community/tutorials/how-to-install-ruby-on-rails-with-rbenv-on-macos)
+
+
+## Installation
+You need to install the app dependencies with this command
+
+~~~
+bundle install
+~~~
+
+## Run the api app
+
+You can start the app using
+
+~~~
+rails s
+~~~
+
+And you can see the app running in [localhost:3000](http://127.0.0.1:3000/)
+
+## Run tests
+
+You can run the tests with
+~~~
+rails test
+~~~
+
+

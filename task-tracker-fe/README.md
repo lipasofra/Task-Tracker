@@ -1,16 +1,49 @@
-# React + Vite
+# Task Tracker Frontend
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+This is the frontend for the task tracker app built using React. In order to run it, you need to follow next instructions.
 
-Currently, two official plugins are available:
+## Requirements
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) (or [oxc](https://oxc.rs) when used in [rolldown-vite](https://vite.dev/guide/rolldown)) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+You need to have a Nodejs version > 20 in your system.
+With Linux and nvm you can use these commands:
 
-## React Compiler
+~~~ bash
+#### Download and install nvm:
+curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.40.3/install.sh | bash
+#### in lieu of restarting the shell
+\. "$HOME/.nvm/nvm.sh"
+#### Download and install Node.js:
+nvm install 24
+#### Verify the Node.js version:
+node -v # Should print "v24.11.1".
+#### Verify npm version:
+npm -v # Should print "11.6.2".
 
-The React Compiler is currently not compatible with SWC. See [this issue](https://github.com/vitejs/vite-plugin-react/issues/428) for tracking the progress.
+~~~
 
-## Expanding the ESLint configuration
+Use [this documentation](https://nodejs.org/en/download) if you are using other stack.
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+## Installation
+
+Install the required dependencies with 
+
+~~~
+npm install
+~~~
+
+## Run the app
+
+You can start the app using
+
+~~~
+npm run dev
+~~~
+
+And you can see the app running in [localhost:5173](http://127.0.0.1:5173/)
+
+## Run tests
+
+You can run the tests with
+~~~
+npm run test
+~~~
