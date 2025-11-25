@@ -31,7 +31,7 @@ const TaskForm = ({ onCreate }) => {
                 required
                 id="outlined-required"
                 label="Description"
-                helperText="Grocery shopping"
+                helperText="eg: Grocery shopping"
                 value={newTask}
                 onChange={handleInputChange}
             />

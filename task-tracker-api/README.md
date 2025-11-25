@@ -9,7 +9,19 @@ You need to have Ruby and Rails installed in your machine. For Linux you can use
 ~~~ bash
 #### Download and install dependencies:
 sudo apt update
-sudo apt install -y git curl libssl-dev libreadline-dev zlib1g-dev build-essential
+sudo apt install -y \
+  build-essential \
+  libssl-dev \
+  libreadline-dev \
+  zlib1g-dev \
+  libffi-dev \
+  libyaml-dev \
+  autoconf \
+  bison \
+  libgdbm-dev \
+  libncurses5-dev \
+  libtool \
+  pkg-config
 
 ### Install rbenv
 git clone https://github.com/rbenv/rbenv.git ~/.rbenv
@@ -46,6 +58,19 @@ You need to install the app dependencies with this command
 ~~~
 bundle install
 ~~~
+
+And run the migrations
+
+~~~
+rails db:migrate
+~~~
+
+If you want some preloaded tasks you can run
+
+~~~
+rails db:seed
+~~~
+
 
 ## Run the api app
 
