@@ -1,12 +1,18 @@
 class TasksController < ApplicationController
   def index
     tasks = Task.all.order(created_at: :desc)
-    render json: tasks
+    render json: tasks, status: :ok
+  rescue StandardError => e
+    render json: { error: e.message }, status: :internal_server_error
   end
 
   def create
-    task = Task.create(task_params)
-    render json: task
+    task = Task.new(task_params)
+    if task.save
+      render json: task, status: :created
+    else
+      render json: {errors: task.errors.full_messages }, status: :unprocessable_entity
+    end
   end
 
   private
